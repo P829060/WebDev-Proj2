@@ -1,0 +1,14 @@
+.contact-block {
+  background-color: rgba(30, 30, 30, 0.6); 
+  color: white;
+  text-align: center;
+  padding: 80px 40px;
+  margin-top: 60px;
+  border-radius: 12px; 
+  backdrop-filter: blur(4px); 
+}
+
+.contact-block .title-holder h2,
+.contact-block .title-holder .subtitle {
+  color: white;
+}
