@@ -7,7 +7,7 @@ const messageSchema = new mongoose.Schema({
   footballer: String,
   comments: String,
 }, {
-  timestamps: true  // adds createdAt and updatedAt
+  timestamps: true  
 });
 
 module.exports = mongoose.model('Message', messageSchema);
