@@ -1,4 +1,4 @@
-'use client'; // Optional if using Next.js App Router
+'use client'; 
 
 import React from 'react';
 import Container from 'react-bootstrap/Container';
