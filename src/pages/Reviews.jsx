@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { Card, Row, Col, Container } from 'react-bootstrap';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([]);
@@ -26,7 +27,7 @@ export default function Reviews() {
 
   return (
     <>
-      {/* ✅ Tailwind CDN v3.4.1 for backdrop-blur and other utilities */}
+      {/* ✅ Tailwind CDN (for layout) */}
       <Head>
         <link
           href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
@@ -34,27 +35,37 @@ export default function Reviews() {
         />
       </Head>
 
-      <div className="min-h-screen bg-gray-900 text-white px-6 py-10">
+      <div className="min-h-screen bg-gray-900 text-white px-4 md:px-8 py-10">
         <h1 className="text-4xl font-bold text-center mb-8">Fan Reviews</h1>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <Container fluid>
+          <Row className="g-4">
             {reviews.map((review, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-xl shadow-lg border border-white/10 bg-black/50 backdrop-blur-md transition-transform transform hover:scale-105"
-              >
-                <h3 className="text-xl font-semibold mb-1">{review.name}</h3>
-                <p className="text-sm text-gray-300 mb-1">
-                  {review.email} • {review.contact}
-                </p>
-                <p className="italic text-sm mb-2">Fav: {review.footballer}</p>
-                <p className="text-white">{review.comments}</p>
-              </div>
+              <Col key={idx} xs={12} sm={6} md={4} lg={3}>
+                <Card
+                  style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)',
+                    color: 'white',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                  }}
+                  className="h-100"
+                >
+                  <Card.Body>
+                    <Card.Title>{review.name}</Card.Title>
+                    <Card.Subtitle className="mb-2" style={{ color: '#fff' }}>
+                      {review.email} • {review.contact}
+                    </Card.Subtitle>
+                    <Card.Text className="fst-italic mb-2">Fav: {review.footballer}</Card.Text>
+                    <Card.Text>{review.comments}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
             ))}
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
     </>
   );
