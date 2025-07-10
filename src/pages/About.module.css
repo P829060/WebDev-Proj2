@@ -11,13 +11,13 @@
 }
 
 .custom-card {
-  background: rgba(0, 0, 0, 0.6); /* darker black glass */
+  background: rgba(0, 0, 0, 0.6); 
   color: white;
-  backdrop-filter: blur(10px); /* more frosted */
+  backdrop-filter: blur(10px); 
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* optional depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
 }
 
 .custom-card:hover {
