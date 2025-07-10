@@ -183,7 +183,6 @@ export default class Info extends Component {
                   <img src={player.img} alt={player.name} className="card-horizontal-img" />
                   <div className="card-body-flex">
                     <h4>#{player.rank} - {player.name} <span className="country">{player.country}</span></h4>
-                    {/*<p className="player-highlight">{player.stats.honors}</p>*/}
                     <> 
 
                     </>
