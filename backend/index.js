@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const contactRoutes = require('./routes/contact');
-const Contact = require('./models/Contact');// ✅ import the model
+const Contact = require('./models/Contact');
 
 const app = express();
 app.use(cors());
@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/api/contact', contactRoutes);
 
-// ✅ Corrected route path here
+
 app.get("/api/reviews", async (req, res) => {
   try {
     const messages = await Contact.find().sort({ submittedAt: -1 });
