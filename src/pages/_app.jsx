@@ -1,4 +1,4 @@
-// src/pages/_app.jsx
+
 import '../pages/Home.css';
 import '../pages/Contact.css';
 import '../pages/Top10.css';
