@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   const { name, email, contact, footballer, comments } = formData;
 
-  // Validation
+
   if (!name || !email || !contact || !footballer || !comments) {
     setError("Please fill in all fields!");
     setSubmitted(false);
