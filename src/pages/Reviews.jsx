@@ -27,7 +27,6 @@ export default function Reviews() {
 
   return (
     <>
-      {/* ✅ Tailwind CDN (for layout) */}
       <Head>
         <link
           href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
