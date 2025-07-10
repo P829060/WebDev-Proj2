@@ -10,11 +10,11 @@
   overflow: hidden;
 }
 
-/* Optional: set explicit width/height if needed */
+
 .video-container iframe {
   border: none;
-  width: 560px; /* YouTube default */
-  height: 315px; /* YouTube default */
+  width: 560px; 
+  height: 315px; 
   display: block;
 }
 
